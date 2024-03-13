@@ -1,0 +1,148 @@
+body {
+    background-color: firebrick;
+}
+
+
+.main-wrap {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    
+}
+
+
+/* TITLE PANEL */
+
+.header {
+    background-color: rgb(110, 110, 110);
+    padding: .8rem;
+    border-radius: 2px;
+    box-shadow: 3px 2px rgb(80, 79, 79);
+}
+
+.header-wrap {
+
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: 1rem minmax(100px, 6fr) 1rem;
+}
+
+.header-wrap > div {
+    background-color: grey;
+}
+
+.top-left,
+.top-right,
+.bot-left,
+.bot-right {
+    opacity: 0;
+}
+
+.top-mid {
+    border-radius: 2px 2px 0 0;
+}
+.bot-mid {
+    border-radius: 0 0 2px 2px;
+}
+.left {
+    border-radius: 2px 0 0 2px ;
+}
+.right {
+    border-radius: 0 0px 2px 0;   
+}
+
+.top-mid,
+.top-right,
+.bot-mid,
+.left,
+.right {
+    box-shadow: 3px 2px rgb(80, 79, 79);
+}
+
+
+.title-wrap {
+    display: flex;
+    justify-content:space-around;
+    align-content: center;
+    gap: 2rem;
+    position: relative;
+}
+
+
+.title,
+.subtitle,
+.buttons {
+    font-family: Cinzel, serif;
+    color: rgb(185, 185, 185);
+    text-shadow: 2px 0px 2px rgb(49, 49, 49);
+    text-align: center;
+}
+
+.title {
+    font-size: 3.3rem;
+    font-weight: 400;
+    letter-spacing: .9rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    margin-top: -6px;
+}
+
+.buttons {
+    font-weight: 500;
+    flex-shrink: 1;
+    align-self: center;
+    font-size: 1rem;
+    background-color: firebrick;
+    opacity: .80;
+    width: 65px;
+    height: 35px;
+    border-radius: 3px;
+    position: absolute;
+}
+
+.add {
+    left: 300px;
+    top: 30px;
+}
+
+.sort {
+    right: 300px;
+    top: 30px;
+}
+
+
+
+@media screen and (max-width:1600px){
+    .add {
+        left: 25px;
+    }
+
+    .sort {
+        right: 25px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .add {
+        top: 65px;
+        left: 25px;
+    }
+
+    .sort {
+        top: 65px;
+        right: 25px;
+    }
+}
+
+@media screen and (max-width:666px){
+    .add {
+        top: 20px;
+        left: 30px;
+    }
+    .sort {
+        top: 20px;
+        right: 30px;
+    }
+}
