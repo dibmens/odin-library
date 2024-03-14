@@ -1,18 +1,13 @@
 body {
     background-color: rgb(29, 29, 29);
-}
-
-
-.main-wrap {
-    display: grid;
-    grid-template-rows: 1fr 5fr;
     
+
 }
 
+/* HEADER */
 
-/* TITLE PANEL */
-
-.header {
+.header,
+.menu {
     background-color: rgb(110, 110, 110);
     padding: .8rem;
     border-radius: 2px;
@@ -20,7 +15,6 @@ body {
 }
 
 .header-wrap {
-
     display: grid;
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-rows: 1rem minmax(100px, 6fr) 1rem;
@@ -70,7 +64,9 @@ body {
 
 .title,
 .subtitle,
-.buttons {
+.buttons,
+.form-title,
+.form-label {
     font-family: Cinzel, serif;
     color: rgb(185, 185, 185);
     text-shadow: 2px 0px 2px rgb(49, 49, 49);
@@ -129,7 +125,73 @@ body {
     }
 }
 
-/* MEDIA */
+/* FORMS */
+
+.menu {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.form-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr repeat(4,1fr);
+    justify-items: center;
+    justify-content: center;
+    gap: .4rem;
+    padding-bottom: .5rem;
+}
+
+.form-title,
+.add-button {
+    grid-column: 1/3;
+    height: fit-content;
+}
+
+.form-member {
+    /* width: fit-content; */
+}
+
+.form-title {
+    font-size: 1.2rem;
+}
+
+.form-label,
+.form-title {
+    display: block;
+    color: black;
+    text-shadow: none;
+}
+
+.title-box,
+.year-box,
+.medium-box {
+    justify-self: end;
+    padding-right: 1rem;
+}
+
+.author-box,
+.genre-box,
+.score-box {
+    justify-self: start;
+    padding-left: 1rem;
+}
+
+.add-button {
+    width: fit-content;
+    height: 32px;
+    align-self: end;
+}
+
+input {
+    border-radius: .3rem;
+    height: 1.3rem;
+    background-color: rgb(185, 184, 184);
+}
+
+
+/* MEDIA ITEMS*/
 
 .media-wrap {
     display: grid;
@@ -140,7 +202,6 @@ body {
     padding: 1rem 0;
     
 }
-
 
 .media {
     font-family: Lora, serif;
@@ -183,7 +244,6 @@ body {
     bottom: 5px;
     padding: 3px;
 }
-
 
 .edit {
     background-color: green;

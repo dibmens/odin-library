@@ -33,6 +33,44 @@
                 <div class="bot-right"></div>
             </div>
         </div>
+        <div class="menu">
+            <form class="add-form form-wrap" action="">
+                <div class="form-title">add or edit a media entry</div>
+                <div class="form-member title-box">
+                    <label class="form-label" for="add-title">title</label>
+                    <input id="add-title">
+                </div>
+                <div class="form-member author-box">
+                    <label class="form-label" for="add-author">author</label>
+                    <input id="add-author">
+                </div>
+                <div class="form-member year-box">
+                    <label class="form-label" for="add-year">year</label>
+                    <input id="add-year">
+                </div>
+                <div class="form-member genre-box">
+                    <label class="form-label" for="add-genre">genre</label>
+                    <input id="add-genre">
+                </div>
+                <div class="form-member medium-box">
+                    <label class="form-label" for="add-medium">medium</label>
+                    <input id="add-medium">
+                </div>
+                <div class="form-member score-box">
+                    <label class="form-label" for="add-score">score</label>
+                    <input id="add-score" list="score">
+                    <datalist id="score">
+                        <option value="Unfinished">Not finished yet</option>
+                        <option value="★">Bad</option>
+                        <option value="★★">Flawed</option>
+                        <option value="★★★">Mediocre</option>
+                        <option value="★★★★">Good</option>
+                        <option value="★★★★★">Excellent</option>
+                    </datalist>
+                </div>
+                <button class="buttons add-button" type="submit">publish</button>
+            </form>
+        </div>
         <div class="media-wrap">
             <div class="media">
                 <div class="media-title">LORD OF THE RINGS: The Fellowship of the Ring</div>
