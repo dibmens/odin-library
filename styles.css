@@ -1,7 +1,5 @@
 body {
     background-color: rgb(29, 29, 29);
-    
-
 }
 
 /* HEADER */
@@ -103,23 +101,23 @@ body {
         position: absolute;
     }
 
-    .add {
+    .add-button {
         top: 65px;
         left: 25px;
     }
 
-    .sort {
+    .sort-button {
         top: 65px;
         right: 25px;
     }
 }
 
-@media screen and (max-width:666px){
-    .add {
+@media screen and (max-width:685px){
+    .add-button {
         top: 20px;
         left: 30px;
     }
-    .sort {
+    .sort-button {
         top: 20px;
         right: 30px;
     }
@@ -130,8 +128,8 @@ body {
 .menu {
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: -2px;
 }
-
 
 .form-wrap {
     display: grid;
@@ -144,7 +142,7 @@ body {
 }
 
 .form-title,
-.add-button {
+.form-button {
     grid-column: 1/3;
     height: fit-content;
 }
@@ -178,7 +176,7 @@ body {
     padding-left: 1rem;
 }
 
-.add-button {
+.form-button {
     width: fit-content;
     height: 32px;
     align-self: end;
@@ -188,12 +186,14 @@ input {
     border-radius: .3rem;
     height: 1.3rem;
     background-color: rgb(185, 184, 184);
+    border: none;
+    border-bottom: solid 2px rgb(80, 79, 79);
+    border-right: solid 2px rgb(80, 79, 79);
 }
 
+/* BOOKS */
 
-/* MEDIA ITEMS*/
-
-.media-wrap {
+.book-wrap {
     display: grid;
     grid-template-columns: repeat(auto-fill, 215px);
     justify-content: center;
@@ -203,8 +203,8 @@ input {
     
 }
 
-.media {
-    font-family: Lora, serif;
+.book {
+    font-family: Cinzel, serif;
     height: 240px;
     text-align: center;
     display: flex;
@@ -218,25 +218,19 @@ input {
     position: relative;
 }
 
-.media-title {
+.book-title {
     font-family: Cinzel, serif;
     font-weight: 700;
     font-size: 1.2rem;
     
 }
 
-.media-source {
+.book-author,
+.book-year {
     font-weight: 600;
 }
 
-.media-description {
-    display: flex;
-    justify-content: center;
-    gap: .5rem;
-}
-
-.edit,
-.delete {
+.delete-button {
     font-size: .8rem;
     position: absolute;
     width: fit-content;
@@ -245,12 +239,7 @@ input {
     padding: 3px;
 }
 
-.edit {
-    background-color: green;
-    left: 7px;
-}
-
-.delete {
+.delete-button {
     right: 7px;
     background-color: rgb(146, 3, 3);
 }
@@ -259,13 +248,13 @@ input {
     display: none;
 }
 
-.media:hover {
+.book:hover {
     border-color: aliceblue;
     .hidden {
         display: block;
     }
 }
 
-.media:focus {
+.book:focus {
     border-color: aliceblue;
 }

@@ -21,11 +21,11 @@
                 <div class="left"></div>
                 <div class="mid">
                     <div class="title-wrap">
-                        <button class="buttons add">add</button>
+                        <button class="buttons add-button">add</button>
                         <div class="title">THE LIBRARIUM</div>
-                        <button class="buttons sort">sort</button>
+                        <button class="buttons sort-button">sort</button>
                     </div>
-                    <div class="subtitle">document your media</div>
+                    <div class="subtitle">document your books</div>
                 </div>
                 <div class="right"></div>
                 <div class="bot-left"></div>
@@ -33,9 +33,9 @@
                 <div class="bot-right"></div>
             </div>
         </div>
-        <div class="menu">
-            <form class="add-form form-wrap" action="">
-                <div class="form-title">add or edit a media entry</div>
+            <div class="menu hidden">
+            <form class="form-wrap" action="">
+                <div class="form-title">add a new book entry</div>
                 <div class="form-member title-box">
                     <label class="form-label" for="add-title">title</label>
                     <input id="add-title">
@@ -53,14 +53,14 @@
                     <input id="add-genre">
                 </div>
                 <div class="form-member medium-box">
-                    <label class="form-label" for="add-medium">medium</label>
-                    <input id="add-medium">
+                    <label class="form-label" for="add-medium">pages</label>
+                    <input id="add-medium" type="number">
                 </div>
                 <div class="form-member score-box">
                     <label class="form-label" for="add-score">score</label>
                     <input id="add-score" list="score">
                     <datalist id="score">
-                        <option value="Unfinished">Not finished yet</option>
+                        <option value="Unread">Not finished yet</option>
                         <option value="★">Bad</option>
                         <option value="★★">Flawed</option>
                         <option value="★★★">Mediocre</option>
@@ -68,79 +68,36 @@
                         <option value="★★★★★">Excellent</option>
                     </datalist>
                 </div>
-                <button class="buttons add-button" type="submit">publish</button>
+                <button class="buttons form-button" type="submit">create entry</button>
             </form>
         </div>
-        <div class="media-wrap">
-            <div class="media">
-                <div class="media-title">LORD OF THE RINGS: The Fellowship of the Ring</div>
-                <div class="media-source">
-                    <div class="author">J.R.R Tolkien</div>
-                    <div class="year">1954</div>
-                </div>
-                <div class="media-description">
-                    <div class="genre">Fantasy</div>
-                    <div class="type">Literature</div>
-                </div>
-                <div class="media-review">Unfinished</div>
-                <button class="buttons edit hidden">edit</button>
-                <button class="buttons delete hidden">drop</button>
+        <div class="book-wrap">
+            <div class="book hidden">
+                <div class="book-title">LORD OF THE RINGS: The Fellowship of the Ring</div>
+                <div class="book-author">J.R.R Tolkien</div>
+                <div class="book-year">1954</div>
+                <div class="book-genre">Fantasy</div>
+                <div class="book-pages">423</div>
+                <div class="book-score">Unread</div>
+                <button class="buttons delete-button hidden">delete</button>
             </div>
-            <div class="media">
-                <div class="media-title">GOODFELLAS</div>
-                <div class="media-source">
-                    <div class="author">Martin Scorsese</div>
-                    <div class="year">1991</div>
-                </div>
-                <div class="media-description">
-                    <div class="genre">Crime</div>
-                    <div class="type">Film</div>
-                </div>
-                <div class="media-review">★★★★★</div>
-                <button class="buttons edit hidden">edit</button>
-                <button class="buttons delete hidden">drop</button>
+            <div class="book">
+                <div class="book-title">BILLY THE WIZKID and The Gilding Stone</div>
+                <div class="book-author">J.R.R Tolkien</div>
+                <div class="book-year">1954</div>
+                <div class="book-genre">Fantasy</div>
+                <div class="book-pages">423</div>
+                <div class="book-score">Unread</div>
+                <button class="buttons delete-button hidden">delete</button>
             </div>
-            <div class="media">
-                <div class="media-title">CALIFORNICATION</div>
-                <div class="media-source">
-                    <div class="author">Red Hot Chilli Peppers</div>
-                    <div class="year">1999</div>
-                </div>
-                <div class="media-description">
-                    <div class="genre">Rock</div>
-                    <div class="type">Music</div>
-                </div>
-                <div class="media-review">★★★★</div>
-                <button class="buttons edit hidden">edit</button>
-                <button class="buttons delete hidden">drop</button>
-            </div>
-            <div class="media">
-                <div class="media-title">THE SIMPSONS season 25</div>
-                <div class="media-source">
-                    <div class="author">Matt Groening</div>
-                    <div class="year">2014</div>
-                </div>
-                <div class="media-description">
-                    <div class="genre">Comedy</div>
-                    <div class="type">TV Show</div>
-                </div>
-                <div class="media-review">★★</div>
-                <button class="buttons edit hidden">edit</button>
-                <button class="buttons delete hidden">drop</button>
-            </div>
-            <div class="media">
-                <div class="media-title">HARRY POTTER and the Philosopher's Stone </div>
-                <div class="media-source">
-                    <div class="author">J.K.Rowling</div>
-                    <div class="year">1997</div>
-                </div>
-                <div class="media-description">
-                    <div class="genre">Fantasy</div>
-                    <div class="type">Literature</div>
-                </div>
-                <div class="media-review">★★★★</div>
-                <button class="buttons edit hidden">edit</button>
-                <button class="buttons delete hidden">drop</button>
+            <div class="book">
+                <div class="book-title">TESTOO</div>
+                <div class="book-author">J.R.R Tolkien</div>
+                <div class="book-year">1954</div>
+                <div class="book-genre">Fantasy</div>
+                <div class="book-pages">423</div>
+                <div class="book-score">Unread</div>
+                <button class="buttons delete-button hidden">delete</button>
             </div>
         </div>
     </div>
