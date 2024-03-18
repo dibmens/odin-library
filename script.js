@@ -13,10 +13,10 @@ function Book(title, author, year, genre, pages, score) {
     this.score = score;
 }
 
-// Function for adding new book object in myLibrary
+// Function for adding new book in myLibrary
 
 function addBookToLibrary() {
-    
+
     let bookVal = [];
 
     for(i = 0; i < 6; i++){
@@ -27,7 +27,6 @@ function addBookToLibrary() {
    
     myLibrary.push(book);
 }
-
 
 // Function for publishing myLibrary
 
@@ -49,7 +48,7 @@ function publishMyLibrary() {
     });
 }
 
-// Function for storing currently published books into myLibrary
+// Function for storing all published books into myLibrary
 
 function updateMyLibrary() {
     let pubList = document.querySelectorAll(`.book-wrap .book`);
@@ -68,7 +67,6 @@ function updateMyLibrary() {
     });
 }
 
-
 // Add button
 
 document.querySelector('.add-button').addEventListener('click', ()=> {
@@ -76,19 +74,16 @@ document.querySelector('.add-button').addEventListener('click', ()=> {
     form.reset();
 });
 
-
 // Sort button
 
-// Delete button
-
-document.querySelector(".book-wrap").addEventListener('click', (click)=> {
-    if(click.target.classList.contains('delete-button')) {
-        click.target.parentElement.remove();
-    }
+document.querySelector('.sort-button').addEventListener('click', ()=> {
+    
     updateMyLibrary();
 
-});
+    myLibrary.sort((a,b) => a.title > b.title ? 1 : -1);
 
+    publishMyLibrary();
+});
 
 // Create Entry button
 
@@ -105,4 +100,18 @@ document.querySelector('.form-button').addEventListener('click', (event)=> {
     } else {
         alert('Please add a title to your new entry!');
     }
+});
+
+// Review Button
+
+
+
+// Delete button
+
+document.querySelector(".book-wrap").addEventListener('click', (click)=> {
+    if(click.target.classList.contains('delete-button')) {
+        click.target.parentElement.remove();
+    }
+    updateMyLibrary();
+
 });

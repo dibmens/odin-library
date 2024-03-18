@@ -230,7 +230,8 @@ input {
     font-weight: 600;
 }
 
-.delete-button {
+.delete-button,
+.review-button {
     font-size: .8rem;
     position: absolute;
     width: fit-content;
@@ -242,6 +243,11 @@ input {
 .delete-button {
     right: 7px;
     background-color: rgb(146, 3, 3);
+}
+
+.review-button {
+    left: 7px;
+    background-color: darkgreen;
 }
 
 .hidden {
