@@ -9,13 +9,14 @@ function Book(title, author, year, genre, pages, score) {
     this.author = author;
     this.year = year;
     this.genre = genre;
-    this.pages = `${pages} pages`;
+    this.pages = pages;
     this.score = score;
 }
 
-// Function for adding a new book object in myLibrary
+// Function for adding new book object in myLibrary
 
 function addBookToLibrary() {
+    
     let bookVal = [];
 
     for(i = 0; i < 6; i++){
@@ -28,27 +29,16 @@ function addBookToLibrary() {
 }
 
 
-document.querySelector('.add-button').addEventListener('click', ()=> {
-    document.querySelector('.menu').classList.toggle('hidden');
-    form.reset();
-});
+// Function for publishing myLibrary
 
+function publishMyLibrary() {
 
-//  Function for sorting myLibrary
+    document.querySelector(`.book-wrap`).replaceChildren("");
 
-
-// Create Entry button functionality
-
-document.querySelector('.form-button').addEventListener('click', (event)=> {
-
-    event.preventDefault();
-
-    addBookToLibrary();
-
-    if(form.elements[0].value != ""){
+    myLibrary.forEach((entry) => {
 
         for(i = 0; i < 6; i++){
-            bookTemplate.children[i].innerText = Object.values(myLibrary[myLibrary.length-1])[i];
+            bookTemplate.children[i].innerText = Object.values(entry)[i];
         };
 
         let bookClone = bookTemplate.cloneNode(true);
@@ -56,17 +46,63 @@ document.querySelector('.form-button').addEventListener('click', (event)=> {
 
         document.querySelector('.book-wrap').append(bookClone);
 
-        form.reset();
-    } else {
-        alert('Please add a title to your new entry!');
-    }
+    });
+}
+
+// Function for storing currently published books into myLibrary
+
+function updateMyLibrary() {
+    let pubList = document.querySelectorAll(`.book-wrap .book`);
+    myLibrary = [];
+
+    pubList.forEach((entry) => {
+        let title = entry.children[0].innerText;
+        let author = entry.children[1].innerText;
+        let year = entry.children[2].innerText;
+        let genre = entry.children[3].innerText;
+        let pages = entry.children[4].innerText;
+        let score = entry.children[5].innerText;
+
+        let book = new Book(title,author,year,genre,pages,score);
+        myLibrary.push(book);
+    });
+}
+
+
+// Add button
+
+document.querySelector('.add-button').addEventListener('click', ()=> {
+    document.querySelector('.menu').classList.toggle('hidden');
+    form.reset();
 });
 
-// Delete Entry button functionality
+
+// Sort button
+
+// Delete button
 
 document.querySelector(".book-wrap").addEventListener('click', (click)=> {
     if(click.target.classList.contains('delete-button')) {
         click.target.parentElement.remove();
     }
+    updateMyLibrary();
+
 });
 
+
+// Create Entry button
+
+document.querySelector('.form-button').addEventListener('click', (event)=> {
+
+    event.preventDefault();
+
+    if(form.elements[0].value != ""){
+
+        addBookToLibrary();
+        publishMyLibrary();
+        form.reset();
+
+    } else {
+        alert('Please add a title to your new entry!');
+    }
+});
