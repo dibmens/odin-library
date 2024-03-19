@@ -3,9 +3,9 @@ body {
 }
 
 /* HEADER */
-
 .header,
-.menu {
+.menu,
+.dialog {
     background-color: rgb(110, 110, 110);
     padding: .8rem;
     border-radius: 2px;
@@ -18,7 +18,8 @@ body {
     grid-template-rows: 1rem minmax(100px, 6fr) 1rem;
 }
 
-.header-wrap > div {
+.header-wrap > div,
+.dialog {
     background-color: grey;
 }
 
@@ -50,7 +51,6 @@ body {
     box-shadow: 3px 2px rgb(80, 79, 79);
 }
 
-
 .title-wrap {
     display: flex;
     justify-content:space-evenly;
@@ -58,7 +58,6 @@ body {
     gap: 1rem;
     position: relative;
 }
-
 
 .title,
 .subtitle,
@@ -124,7 +123,6 @@ body {
 }
 
 /* FORMS */
-
 .menu {
     padding-top: 0;
     padding-bottom: 0;
@@ -145,10 +143,6 @@ body {
 .form-button {
     grid-column: 1/3;
     height: fit-content;
-}
-
-.form-member {
-    /* width: fit-content; */
 }
 
 .form-title {
@@ -192,7 +186,6 @@ input {
 }
 
 /* BOOKS */
-
 .book-wrap {
     display: grid;
     grid-template-columns: repeat(auto-fill, 215px);
@@ -200,7 +193,6 @@ input {
     align-content: start;
     gap: 1rem;
     padding: 1rem 0;
-    
 }
 
 .book {
@@ -222,13 +214,19 @@ input {
     font-family: Cinzel, serif;
     font-weight: 700;
     font-size: 1.2rem;
-    
 }
 
 .book-author,
 .book-year {
     font-weight: 600;
 }
+
+.book-genre,
+.book-pages,
+.book-score {
+    font-size: .9rem;
+}
+
 
 .delete-button,
 .review-button {
@@ -263,4 +261,35 @@ input {
 
 .book:focus {
     border-color: aliceblue;
+}
+
+.dialog {
+    border: none;
+    padding-bottom: .2rem;
+}
+
+.dialog-button,
+.title-button {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 5px;
+    background-color: darkgreen;
+}
+
+#review {
+    display: block;
+}
+
+.dialog-label {
+    padding-bottom: .5rem;
+    font-weight: 500;
+}
+
+.title-dialog form {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-button {
+    align-self: center;
 }

@@ -54,16 +54,16 @@
                 </div>
                 <div class="form-member medium-box">
                     <label class="form-label" for="add-medium">pages</label>
-                    <input id="add-medium" type="number">
+                    <input id="add-medium">
                 </div>
                 <div class="form-member score-box">
                     <label class="form-label" for="add-score">score</label>
                     <input id="add-score" list="score">
                     <datalist id="score">
-                        <option value="unread">Not finished yet</option>
+                        <option value="Not read">Not finished yet</option>
                         <option value="★">Bad</option>
                         <option value="★★">Flawed</option>
-                        <option value="★★★">Mediocre</option>
+                        <option value="★★★">Alright</option>
                         <option value="★★★★">Good</option>
                         <option value="★★★★★">Excellent</option>
                     </datalist>
@@ -75,14 +75,35 @@
         </div>
     </div>
     <div class="book hidden">
-        <div class="book-title">IF YOU CAN READ THIS, I MESSED UP</div>
-        <div class="book-author">E.R. ROR</div>
-        <div class="book-year">2024</div>
-        <div class="book-genre">Clone Template</div>
-        <div class="book-pages">101010</div>
-        <div class="book-score">Pathetic</div>
+        <div class="book-title">TEMPLATE</div>
+        <div class="book-author"></div>
+        <div class="book-year"></div>
+        <div class="book-genre"></div>
+        <div class="book-pages"></div>
+        <div class="book-score"></div>
         <button class="buttons delete-button hidden">delete</button>
         <button class="buttons review-button hidden">review</button>
     </div>
+    <dialog class="dialog review-dialog">
+        <form method="dialog">
+            <label class="form-label dialog-label" for="review">change your rating</label>
+                <input id="review" list="review-options" placeholder="Not read">
+                <datalist id="review-options">
+                    <option value="Not read">Not finished yet</option>
+                    <option value="★">Bad</option>
+                    <option value="★★">Flawed</option>
+                    <option value="★★★">Alright</option>
+                    <option value="★★★★">Good</option>
+                    <option value="★★★★★">Excellent</option>
+                </datalist>
+            <button class="buttons dialog-button" value="default">submit</button>
+        </form>
+    </dialog>
+    <dialog class="dialog title-dialog">
+       <form method="dialog">
+           <div class="form-label">Give your book a title first</div>
+           <button class="buttons title-button">ok</button>
+       </form>
+    </dialog>
 </body>
 </html>
