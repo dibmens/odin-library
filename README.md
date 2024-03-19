@@ -2,6 +2,7 @@ A simple item library exercise
 
 Attribution:
 
+Fonts by Google Fonts at https://fonts.google.com/
 
 Assignment:
 
