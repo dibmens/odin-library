@@ -88,9 +88,12 @@ document.querySelector(".book-wrap").addEventListener('click', (event)=> {
 
 // 'Review Dialog' Button
 document.querySelector(`.dialog-button`).addEventListener(`click`, ()=> {
-    lastReview.children[5].innerText = document.querySelector(`#review`).value;
+    let newReview = document.querySelector(`#review`);
+    lastReview.children[5].innerText = newReview.value;
+    newReview.value = ``;
     updateMyLibrary();
     publishMyLibrary();
+
 });
 
 // 'Delete' button

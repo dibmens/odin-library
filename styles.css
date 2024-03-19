@@ -269,11 +269,13 @@ input {
 }
 
 .dialog-button,
-.title-button {
+.title-button,
+.cancel-button {
     width: fit-content;
     height: fit-content;
     margin-top: 5px;
     background-color: darkgreen;
+    
 }
 
 #review {
@@ -292,4 +294,13 @@ input {
 
 .title-button {
     align-self: center;
+}
+
+.cancel-button {
+    background-color: firebrick;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: center;
 }
