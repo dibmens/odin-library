@@ -4,13 +4,24 @@ let myLibrary = [];
 let lastReview;
 
 // Book object constructor
-function Book(title, author, year, genre, pages, score) {
-    this.title = title;
-    this.author = author;
-    this.year = year;
-    this.genre = genre;
-    this.pages = pages;
-    this.score = score;
+// function Book(title, author, year, genre, pages, score) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+//     this.genre = genre;
+//     this.pages = pages;
+//     this.score = score;
+// }
+// Turn the object into a class
+class Book{
+    constructor(title, author, year, genre, pages, score) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.genre = genre;
+        this.pages = pages;
+        this.score = score;
+    }
 }
 
 // Function for publishing myLibrary into HTML
